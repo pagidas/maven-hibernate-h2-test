@@ -1,6 +1,7 @@
 package dev.kostasakrivos.test.util;
 
 import dev.kostasakrivos.test.entity.Student;
+import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -11,6 +12,31 @@ import java.util.Map;
 import java.util.Properties;
 
 public class HibernateUtil {
+
+    private static StandardServiceRegistry registry;
+    private static SessionFactory sessionFactory;
+
+    public static SessionFactory getSessionFactory() {
+
+        if(sessionFactory == null) {
+            try {
+                MetadataSources metadataSources = new MetadataSources(configureServiceRegistry());
+
+                addEntityClasses(metadataSources);
+
+                sessionFactory = metadataSources.buildMetadata()
+                        .getSessionFactoryBuilder()
+                        .build();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                if(registry != null)
+                    StandardServiceRegistryBuilder.destroy(registry);
+            }
+        }
+
+        return sessionFactory;
+    }
 
     private static StandardServiceRegistry configureServiceRegistry() {
         return new StandardServiceRegistryBuilder()
