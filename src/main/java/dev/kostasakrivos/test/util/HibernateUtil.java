@@ -1,5 +1,7 @@
 package dev.kostasakrivos.test.util;
 
+import dev.kostasakrivos.test.entity.Student;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
@@ -26,6 +28,10 @@ public class HibernateUtil {
         }
 
         return properties;
+    }
+
+    private static void addEntityClasses(MetadataSources metadataSources) {
+        metadataSources.addAnnotatedClass(Student.class);
     }
 
 }
