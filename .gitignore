@@ -13,6 +13,7 @@ lib/*
 jaxws/jaxws-client/src/main/
 jaxws/jaxws-endpoint/src/main/webapp/WEB-INF/wsdl/
 build.xml
+resources/
 
 
 # OS Files #
