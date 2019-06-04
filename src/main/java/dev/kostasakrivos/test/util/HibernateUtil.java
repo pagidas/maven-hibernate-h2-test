@@ -60,4 +60,9 @@ public class HibernateUtil {
         metadataSources.addAnnotatedClass(Student.class);
     }
 
+    public static void shutdown() {
+        if(registry != null)
+            StandardServiceRegistryBuilder.destroy(registry);
+    }
+
 }
