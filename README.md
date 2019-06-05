@@ -1,7 +1,7 @@
 # Hibernate CRUD Entity Test
 
 This project tests [Hibernate's](https://hibernate.org/)
-abstract functionality to store, retrieve, edit and delete data 
+abstract functionality to *store*, *retrieve*, *edit* and *delete* data 
 from an embedded [H2](https://www.h2database.com/html/main.html)
 database engine.
 
