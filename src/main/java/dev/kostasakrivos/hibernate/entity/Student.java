@@ -1,4 +1,4 @@
-package dev.kostasakrivos.test.entity;
+package dev.kostasakrivos.hibernate.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

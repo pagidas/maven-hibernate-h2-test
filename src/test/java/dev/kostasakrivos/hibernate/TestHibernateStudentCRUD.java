@@ -1,7 +1,7 @@
-package dev.kostasakrivos.test;
+package dev.kostasakrivos.hibernate;
 
-import dev.kostasakrivos.test.entity.Student;
-import dev.kostasakrivos.test.util.HibernateUtil;
+import dev.kostasakrivos.hibernate.entity.Student;
+import dev.kostasakrivos.hibernate.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.AfterClass;
@@ -33,7 +33,7 @@ public class TestHibernateStudentCRUD {
     public void testCreateUser() {
         // creates a Student
         System.out.println("\nCreating a new Student...");
-        Student student = new Student("test-firstName", "test-lastName");
+        Student student = new Student("hibernate-firstName", "hibernate-lastName");
 
         // creates a Session
         session = factory.openSession();

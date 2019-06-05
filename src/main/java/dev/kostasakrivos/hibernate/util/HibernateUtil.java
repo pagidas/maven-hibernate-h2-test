@@ -1,6 +1,6 @@
-package dev.kostasakrivos.test.util;
+package dev.kostasakrivos.hibernate.util;
 
-import dev.kostasakrivos.test.entity.Student;
+import dev.kostasakrivos.hibernate.entity.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
