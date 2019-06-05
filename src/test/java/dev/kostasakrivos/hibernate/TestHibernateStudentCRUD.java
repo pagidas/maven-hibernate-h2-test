@@ -30,10 +30,10 @@ public class TestHibernateStudentCRUD {
     }
 
     @Test
-    public void testCreateUser() {
+    public void testCreateStudent() {
         // creates a Student
         System.out.println("\nCreating a new Student...");
-        Student student = new Student("hibernate-firstName", "hibernate-lastName");
+        Student student = new Student("test-firstName", "test-lastName");
 
         // creates a Session
         session = factory.openSession();
