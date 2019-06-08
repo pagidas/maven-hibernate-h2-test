@@ -30,7 +30,7 @@ To clone this repository:
 git clone https://github.com/pagidas/maven-hibernate-h2-test.git
 ```
 
-On the root the project directory, where **pom.xml** is located:
+On the root project directory, where **pom.xml** is located:
 
 ```shell
 mvn compile
